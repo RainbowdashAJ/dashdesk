@@ -1,3 +1,7 @@
+<script setup>
+import DashRunner from './components/DashRunner.vue'
+</script>
+
 <template>
   <div class="page">
     <div class="hero">
@@ -17,27 +21,44 @@
         <div class="contact-value">vnsctx666@gmail.com</div>
       </section>
 
-      <section class="contact-card accent-blue">
+      <a
+        class="contact-card contact-card--link accent-blue"
+        href="https://discord.gg/sC5Qk7qr"
+        target="_blank"
+        rel="noreferrer"
+      >
         <span class="card-tag">Community</span>
         <h2>Chat Space</h2>
         <p>Discord</p>
         <div class="contact-value">https://discord.gg/sC5Qk7qr</div>
-      </section>
+      </a>
 
-      <section class="contact-card accent-gold">
+      <a
+        class="contact-card contact-card--link accent-gold"
+        href="https://x.com/GhggVhh40894"
+        target="_blank"
+        rel="noreferrer"
+      >
         <span class="card-tag">Partnerships</span>
         <h2>Collaboration Desk</h2>
         <p>business inquiries, co-building requests, or creator partnerships</p>
         <div class="contact-value">https://x.com/GhggVhh40894</div>
-      </section>
+      </a>
 
-      <section class="contact-card accent-violet">
+      <a
+        class="contact-card contact-card--link accent-violet"
+        href="https://youtube.com/@rdddash"
+        target="_blank"
+        rel="noreferrer"
+      >
         <span class="card-tag">Social</span>
         <h2>Follow Updates</h2>
         <p>YouTube</p>
         <div class="contact-value">https://youtube.com/@rdddash</div>
-      </section>
+      </a>
     </div>
+
+    <DashRunner class="runner-block" />
   </div>
 </template>
 
@@ -96,6 +117,24 @@ p {
     var(--surface-bg);
   box-shadow: 0 18px 40px rgba(72, 38, 120, 0.12);
   backdrop-filter: blur(14px);
+}
+
+.contact-card--link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.contact-card--link:hover,
+.contact-card--link:focus-visible {
+  transform: translateY(-4px);
+  border-color: rgba(155, 93, 229, 0.36);
+  box-shadow: 0 22px 46px rgba(72, 38, 120, 0.18);
+  outline: none;
 }
 
 .contact-card::after {
@@ -159,6 +198,10 @@ p {
   word-break: break-word;
 }
 
+.runner-block {
+  margin-top: 14px;
+}
+
 @media (max-width: 768px) {
   .page {
     padding: 28px 20px;
@@ -166,6 +209,10 @@ p {
 
   h1 {
     font-size: 34px;
+  }
+
+  .runner-block {
+    margin-top: 14px;
   }
 }
 </style>

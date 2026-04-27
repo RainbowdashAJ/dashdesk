@@ -1,9 +1,8 @@
 <template>
   <div class="page">
-    <!-- Hero -->
     <section class="hero">
       <div class="hero-content">
-        <div class="hero-badge">Official Website · In Development</div>
+        <div class="hero-badge">Official Website | In Development</div>
         <h1>Welcome to DashDesk Center</h1>
         <p class="hero-text">
           DashDesk is a pony desktop companion project for Windows, built to bring
@@ -25,7 +24,6 @@
       </div>
     </section>
 
-    <!-- Intro cards -->
     <section class="intro-grid">
       <div class="info-card">
         <h2>About DashDesk</h2>
@@ -52,7 +50,6 @@
       </div>
     </section>
 
-    <!-- Features -->
     <section class="features-section">
       <div class="section-header">
         <p class="section-tag">Features</p>
@@ -101,7 +98,6 @@
       </div>
     </section>
 
-    <!-- Preview / screenshot area -->
     <section class="gallery-section">
       <div class="section-header">
         <p class="section-tag">Preview</p>
@@ -125,7 +121,6 @@
       </div>
     </section>
 
-    <!-- Join us -->
     <section class="join-section">
       <div class="join-content">
         <p class="section-tag">Join the Project</p>
@@ -159,16 +154,57 @@
 
 <style scoped>
 .page {
+  --home-surface-strong: rgba(255, 255, 255, 0.9);
+  --home-surface-soft: rgba(255, 255, 255, 0.86);
+  --home-border: rgba(148, 163, 184, 0.16);
+  --home-shadow: rgba(148, 163, 184, 0.12);
+  --home-text-strong: var(--page-heading-color);
+  --home-text-body: rgba(44, 29, 67, 0.84);
+  --home-text-muted: rgba(44, 29, 67, 0.64);
+  --home-badge-text: #1d4ed8;
+  --home-badge-bg: linear-gradient(135deg, #dbeafe, #eff6ff);
+  --home-badge-border: rgba(96, 165, 250, 0.25);
+  --home-placeholder-bg: linear-gradient(135deg, #f8fbff, #eaf3ff);
+  --home-placeholder-border: rgba(96, 165, 250, 0.4);
+  --home-placeholder-text: #1e40af;
+  --home-placeholder-muted: #64748b;
+  --home-feature-card-bg: linear-gradient(180deg, #ffffff, #f4f9ff);
+  --home-feature-border: rgba(96, 165, 250, 0.16);
+  --home-feature-hover: rgba(96, 165, 250, 0.28);
+  --home-feature-shadow: rgba(96, 165, 250, 0.12);
+  --home-accent: #3b82f6;
+  --home-feature-icon-bg: linear-gradient(135deg, #60a5fa, #93c5fd);
   min-height: 100vh;
   padding: 32px 20px 72px;
-  color: #1e293b;
+  color: var(--page-text-color);
   background:
-    radial-gradient(circle at top left, rgba(147, 197, 253, 0.35), transparent 26%),
-    radial-gradient(circle at top right, rgba(191, 219, 254, 0.45), transparent 22%),
-    linear-gradient(180deg, #f8fbff 0%, #eef5ff 52%, #f9fcff 100%);
+    radial-gradient(circle at top left, rgba(147, 197, 253, 0.2), transparent 26%),
+    radial-gradient(circle at top right, rgba(191, 219, 254, 0.22), transparent 22%),
+    transparent;
 }
 
-/* Hero */
+:global(.theme-dark) .page {
+  --home-surface-strong: rgba(26, 20, 44, 0.88);
+  --home-surface-soft: rgba(26, 20, 44, 0.84);
+  --home-border: rgba(136, 112, 212, 0.24);
+  --home-shadow: rgba(0, 0, 0, 0.28);
+  --home-text-body: rgba(243, 236, 255, 0.84);
+  --home-text-muted: rgba(243, 236, 255, 0.68);
+  --home-badge-text: #ffd166;
+  --home-badge-bg: linear-gradient(135deg, rgba(255, 209, 102, 0.2), rgba(255, 255, 255, 0.08));
+  --home-badge-border: rgba(255, 209, 102, 0.22);
+  --home-placeholder-bg: linear-gradient(135deg, rgba(33, 26, 58, 0.96), rgba(19, 15, 33, 0.94));
+  --home-placeholder-border: rgba(255, 209, 102, 0.26);
+  --home-placeholder-text: #ffd166;
+  --home-placeholder-muted: rgba(243, 236, 255, 0.68);
+  --home-feature-card-bg: linear-gradient(180deg, rgba(39, 30, 66, 0.96), rgba(24, 20, 43, 0.94));
+  --home-feature-border: rgba(136, 112, 212, 0.24);
+  --home-feature-hover: rgba(255, 209, 102, 0.2);
+  --home-feature-shadow: rgba(0, 0, 0, 0.22);
+  --home-accent: #ffd166;
+  --home-feature-icon-bg: linear-gradient(135deg, #f15bb5, #ffd166);
+}
+
 .hero {
   max-width: 1200px;
   margin: 0 auto 28px;
@@ -181,9 +217,9 @@
 .hero-content,
 .hero-visual {
   border-radius: 28px;
-  background: rgba(255, 255, 255, 0.88);
-  border: 1px solid rgba(148, 163, 184, 0.16);
-  box-shadow: 0 18px 40px rgba(148, 163, 184, 0.14);
+  background: var(--home-surface-strong);
+  border: 1px solid var(--home-border);
+  box-shadow: 0 18px 40px var(--home-shadow);
   backdrop-filter: blur(10px);
 }
 
@@ -199,16 +235,16 @@
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.4px;
-  color: #1d4ed8;
-  background: linear-gradient(135deg, #dbeafe, #eff6ff);
-  border: 1px solid rgba(96, 165, 250, 0.25);
+  color: var(--home-badge-text);
+  background: var(--home-badge-bg);
+  border: 1px solid var(--home-badge-border);
 }
 
 h1 {
   margin: 0 0 18px;
   font-size: clamp(34px, 5vw, 58px);
   line-height: 1.05;
-  color: #0f172a;
+  color: var(--home-text-strong);
 }
 
 .hero-text {
@@ -216,14 +252,14 @@ h1 {
   margin: 0;
   font-size: 18px;
   line-height: 1.9;
-  color: #334155;
+  color: var(--home-text-body);
 }
 
 .hero-note {
   margin-top: 24px;
   font-size: 14px;
   line-height: 1.8;
-  color: #64748b;
+  color: var(--home-text-muted);
 }
 
 .hero-visual {
@@ -240,13 +276,13 @@ h1 {
   min-height: 220px;
   padding: 24px;
   border-radius: 22px;
-  border: 1.5px dashed rgba(96, 165, 250, 0.4);
-  background: linear-gradient(135deg, #f8fbff, #eaf3ff);
+  border: 1.5px dashed var(--home-placeholder-border);
+  background: var(--home-placeholder-bg);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #1e3a8a;
+  color: var(--home-placeholder-text);
   text-align: center;
 }
 
@@ -254,17 +290,16 @@ h1 {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 8px;
-  color: #1e40af;
+  color: var(--home-placeholder-text);
 }
 
 .image-placeholder small {
   font-size: 14px;
   line-height: 1.7;
-  color: #64748b;
+  color: var(--home-placeholder-muted);
   max-width: 320px;
 }
 
-/* Intro */
 .intro-grid {
   max-width: 1200px;
   margin: 0 auto 28px;
@@ -276,25 +311,24 @@ h1 {
 .info-card {
   padding: 26px;
   border-radius: 22px;
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(148, 163, 184, 0.16);
-  box-shadow: 0 12px 28px rgba(148, 163, 184, 0.12);
+  background: var(--home-surface-soft);
+  border: 1px solid var(--home-border);
+  box-shadow: 0 12px 28px var(--home-shadow);
 }
 
 .info-card h2 {
   margin: 0 0 12px;
   font-size: 22px;
-  color: #0f172a;
+  color: var(--home-text-strong);
 }
 
 .info-card p {
   margin: 0;
   font-size: 15px;
   line-height: 1.85;
-  color: #475569;
+  color: var(--home-text-body);
 }
 
-/* Shared section */
 .features-section,
 .gallery-section,
 .join-section {
@@ -302,9 +336,9 @@ h1 {
   margin: 0 auto 28px;
   padding: 30px;
   border-radius: 28px;
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(148, 163, 184, 0.16);
-  box-shadow: 0 18px 42px rgba(148, 163, 184, 0.12);
+  background: var(--home-surface-soft);
+  border: 1px solid var(--home-border);
+  box-shadow: 0 18px 42px var(--home-shadow);
 }
 
 .section-header {
@@ -317,14 +351,14 @@ h1 {
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #3b82f6;
+  color: var(--home-accent);
 }
 
 .section-header h2,
 .join-content h2 {
   margin: 0 0 12px;
   font-size: 34px;
-  color: #0f172a;
+  color: var(--home-text-strong);
 }
 
 .section-header p,
@@ -332,10 +366,9 @@ h1 {
   margin: 0;
   font-size: 16px;
   line-height: 1.9;
-  color: #475569;
+  color: var(--home-text-body);
 }
 
-/* Features */
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -346,16 +379,16 @@ h1 {
   position: relative;
   padding: 24px;
   border-radius: 22px;
-  background: linear-gradient(180deg, #ffffff, #f4f9ff);
-  border: 1px solid rgba(96, 165, 250, 0.16);
-  box-shadow: 0 10px 24px rgba(148, 163, 184, 0.1);
+  background: var(--home-feature-card-bg);
+  border: 1px solid var(--home-feature-border);
+  box-shadow: 0 10px 24px var(--home-shadow);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .feature-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(96, 165, 250, 0.28);
-  box-shadow: 0 16px 30px rgba(96, 165, 250, 0.12);
+  border-color: var(--home-feature-hover);
+  box-shadow: 0 16px 30px var(--home-feature-shadow);
 }
 
 .feature-icon {
@@ -369,30 +402,28 @@ h1 {
   font-weight: 800;
   font-size: 14px;
   color: #ffffff;
-  background: linear-gradient(135deg, #60a5fa, #93c5fd);
+  background: var(--home-feature-icon-bg);
 }
 
 .feature-card h3 {
   margin: 0 0 10px;
   font-size: 20px;
-  color: #0f172a;
+  color: var(--home-text-strong);
 }
 
 .feature-card p {
   margin: 0;
   font-size: 15px;
   line-height: 1.8;
-  color: #475569;
+  color: var(--home-text-body);
 }
 
-/* Gallery */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
 
-/* Join */
 .join-section {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -404,21 +435,21 @@ h1 {
   height: 100%;
   padding: 28px;
   border-radius: 22px;
-  background: linear-gradient(180deg, #ffffff, #eef6ff);
-  border: 1px solid rgba(96, 165, 250, 0.18);
-  box-shadow: 0 12px 28px rgba(148, 163, 184, 0.1);
+  background: var(--home-feature-card-bg);
+  border: 1px solid var(--home-feature-border);
+  box-shadow: 0 12px 28px var(--home-shadow);
 }
 
 .recruit-card h3 {
   margin: 0 0 14px;
   font-size: 24px;
-  color: #0f172a;
+  color: var(--home-text-strong);
 }
 
 .recruit-card ul {
   margin: 0;
   padding-left: 20px;
-  color: #475569;
+  color: var(--home-text-body);
 }
 
 .recruit-card li {
@@ -426,7 +457,6 @@ h1 {
   line-height: 1.7;
 }
 
-/* Responsive */
 @media (max-width: 980px) {
   .hero,
   .join-section,
